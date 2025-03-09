@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Scripts -->
+    <script src="https://cdn.freshdev.io/assets/app-client@2.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@freshworks/crayons@v4/dist/crayons/crayons.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"
+    ></script>
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@freshworks/crayons@v4/css/crayons-min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/iparams.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="installation-view">
+        <h3 class="fw-type-h3 fw-type-bold custom-align">featureOS</h3>
+        <div class="config-container">
+          <div class="installation-container column">
+            <div class="fw-type-sm fw-type-semibold fw-m-0 custom-padding">
+              About
+            </div>
+            <p
+              class="fw-type-base fw-type-sm fw-m-0 fw-pt-8 fw-color-smoke-700 custom-bottom"
+            >
+              Collect feedback seemlessly with featureOS and Freshchat
+              integration. Easily capture, organize, and prioritize customer
+              suggestions, bug reports, and feature requests to drive product
+              improvements.
+              <a href="" target="_blank" class="support-link fw-type-anchor">
+                Learn more
+              </a>
+            </p>
+            <div class="setup">
+              <h5 class="connect-info">
+                <span id="link-state">Connect your featureOS account</span>
+              </h5>
+              <div class="details-container">
+                <div id="connect-account" class="hide">
+                  <div id="initial-container" class="">
+                    <img
+                      src="./assets/images/logo.svg"
+                      class="fw-my-16 main-logo"
+                    />
+
+                    <div class="main-input">
+                      <div class="input-container">
+                        <fw-input
+                          id="api-key"
+                          label="featureOS API Key"
+                          required
+                          placeholder="Enter API Key"
+                          type="password"
+                          class="secure-field"
+                          data-bind="api_key"
+                        />
+                        <div slot="hint-text">
+                          <a
+                            href="https://feedback.featureos.app/kb/article/how-to-generate-an-api-key-on-hellonext"
+                            target="_blank"
+                            class="fw-type-anchor help-text"
+                          >
+                            How do I find my featureOS API Key?
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="input-container input-two">
+                        <fw-input
+                          id="store_key"
+                          label="SSO Key"
+                          required
+                          placeholder="Enter SSO Key"
+                          type="password"
+                          class="secure-field"
+                          data-bind="store_url"
+                        />
+                        <div slot="hint-text">
+                          <a
+                            href="https://feedback.featureos.app/kb/article/setting-up-single-sign-on-for-your-hellonext-account"
+                            target="_blank"
+                            class="fw-type-anchor help-text"
+                          >
+                            How do I find my featureOS SSO Key?
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <fw-button color="primary" id="link-account">
+                      <fw-icon
+                        slot="before-label"
+                        size="16"
+                        name="arrow-right"
+                      ></fw-icon>
+                      Authenticate account
+                    </fw-button>
+                  </div>
+                  <div id="loading-container" class="hide">
+                    <div class="loader">
+                      <fw-spinner size="medium"></fw-spinner>
+                      <div class="fw-mt-8">Authenticating...</div>
+                    </div>
+                  </div>
+                  <div id="error-container" class="hide">
+                    <div
+                      class="reload-container fw-flex fw-items-center fw-flex-column fw-justify-center"
+                    >
+                      <span id="error-message">Invalid domain and keys</span>
+                      <fw-button id="retry-button" color="link" class="fw-mt-8">
+                        <fw-icon
+                          slot="before-label"
+                          size="16"
+                          name="refresh"
+                        ></fw-icon>
+                        <span>Return</span>
+                      </fw-button>
+                    </div>
+                  </div>
+                </div>
+                <div id="linked-account" class="hide">
+                  <div class="fw-flex fw-flex-row fw-items-center">
+                    <div
+                      class="icon-container fw-flex fw-items-center fw-justify-center"
+                    >
+                      <img src="./assets/images/icon.svg" />
+                    </div>
+                    <div class="fw-pl-8  title-div" style="padding-inline-start: 1.25rem">
+                      <div class="fw-type-sm fw-type-semibold fw-m-0  sandbox-title">
+                        Sandbox India Pvt. Ltd.
+                      </div>
+                      <p
+                        id="connect_date"
+                        class="fw-m-0 fw-type-regular fw-type-xs"
+                      >
+                        Connected on <span id="installed-date"></span>
+                      </p>
+                    </div>
+                    <div class="fw-flex-grow fw-flex fw-justify-end">
+                      <fw-button id="unlink-account" color="secondary">
+                        <fw-icon name="link-broken" size="14"></fw-icon>
+                        <span class="fw-pl-8">Unlink account</span>
+                      </fw-button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/scripts/iparams.js"></script>
+  </body>
+</html>

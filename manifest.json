@@ -1,0 +1,34 @@
+{
+  "platform-version": "2.3",
+  "product": {
+    "freshworks_crm": {
+      "location": {
+        "chat_conversation_sidebar": {
+          "url": "index.html",
+          "icon": "icon.svg"
+        }
+      },
+      "functions": {
+        "searchPost": {
+          "timeout": 20
+        },
+        "jwt_token_generation": {
+          "timeout": 20
+        },
+        "createPost": {
+          "timeout": 20
+        },
+        "category": {
+          "timeout": 20
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "jsonwebtoken": "9.0.1"
+  },
+  "engines": {
+    "node": "18.16.1",
+    "fdk": "9.0.2"
+  }
+}

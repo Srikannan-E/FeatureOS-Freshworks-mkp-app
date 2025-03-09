@@ -1,0 +1,5 @@
+fw-input {
+    --fw-input-border-radius: 10px;
+    --fw-label-color: #ff9800;
+    --fw-hint-color: #4caf50;
+  }
