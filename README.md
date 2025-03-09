@@ -1,6 +1,8 @@
 # FeatureOS-Freshworks-mkp-app
 Feedback management app for Freshchat saas product
 
+Link : https://www.freshworks.com/apps/featureos_1/
+
 Key features :
 
 Centralize all your user feedback in one place, respond,
